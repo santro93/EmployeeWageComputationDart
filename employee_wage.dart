@@ -23,19 +23,16 @@ class Employee {
           print("Employee is Present Full Time.");
           empHours = 8;
           empWage = empHours * EMP_RATE_PER_HOUR;
-          print("Present Employee Wage: $empWage");
           break;
 
         case (2):
           print("Employee is Present Part Time.");
           empHours = 4;
           empWage = empHours * EMP_RATE_PER_HOUR;
-          print("Part Time Employee Wage: $empWage");
           break;
-          
+
         default:
           print("Employee is Absent.");
-          print("Absent Employee Wage: $empWage");
       }
       empWage = empHours * EMP_RATE_PER_HOUR;
       TotalEmpWage += empWage;
