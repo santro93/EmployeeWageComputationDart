@@ -15,20 +15,23 @@ class Employee {
     int empWage = 0;
 
     int empCheck = Random().nextInt(3);
+    switch (empCheck) {
+      case (1):
+        print("Employee is Present Full Time.");
+        empHours = 8;
+        empWage = empHours * EMP_RATE_PER_HOUR;
+        print("Present Employee Wage: $empWage");
+        break;
 
-    if (empCheck == IS_FULL_TIME) {
-      print("Employee is Present Full Time.");
-      empHours = 8;
-      empWage = empHours * EMP_RATE_PER_HOUR;
-      print("Present Employee Wage: $empWage");
-    } else if (empCheck == IS_PART_TIME) {
-      print("Employee is Present Part Time.");
-      empHours = 4;
-      empWage = empHours * EMP_RATE_PER_HOUR;
-      print("Part Time Employee Wage: $empWage");
-    } else {
-      print("Employee is Absent.");
-      print("Absent Employee Wage: $empWage");
+      case (2):
+        print("Employee is Present Part Time.");
+        empHours = 4;
+        empWage = empHours * EMP_RATE_PER_HOUR;
+        print("Part Time Employee Wage: $empWage");
+        break;
+      default:
+        print("Employee is Absent.");
+        print("Absent Employee Wage: $empWage");
     }
   }
 }
