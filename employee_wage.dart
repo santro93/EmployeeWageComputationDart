@@ -9,20 +9,26 @@ void main(List<String> args) {
 class Employee {
   void employeetype() {
     int IS_FULL_TIME = 1;
+    int IS_PART_TIME = 2;
     int EMP_RATE_PER_HOUR = 20;
     int empHours = 0;
     int empWage = 0;
 
-    int empCheck = Random().nextInt(2);
+    int empCheck = Random().nextInt(3);
 
     if (empCheck == IS_FULL_TIME) {
-      print("Employee is Present");
+      print("Employee is Present Full Time.");
       empHours = 8;
       empWage = empHours * EMP_RATE_PER_HOUR;
-      print("Employee Wage: $empWage");
+      print("Present Employee Wage: $empWage");
+    } else if (empCheck == IS_PART_TIME) {
+      print("Employee is Present Part Time.");
+      empHours = 4;
+      empWage = empHours * EMP_RATE_PER_HOUR;
+      print("Part Time Employee Wage: $empWage");
     } else {
-      print("Employee is Absent");
-      print("Employee Wage: $empWage");
+      print("Employee is Absent.");
+      print("Absent Employee Wage: $empWage");
     }
   }
 }
